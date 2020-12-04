@@ -79,7 +79,7 @@ var Personas;
     }
     Personas.AgregarPersona = AgregarPersona;
     function calcPromedio() {
-        avgage.value = Math.round((listaPersona.filter(function (item) {
+        avgage.value = (listaPersona.filter(function (item) {
             return filterSexo.value === Personas.eSexo.Masculino ?
                 item.sexo === Personas.eSexo.Masculino :
                 item.sexo === Personas.eSexo.Femenino;
@@ -89,7 +89,7 @@ var Personas;
             return filterSexo.value === Personas.eSexo.Masculino ?
                 item.sexo === Personas.eSexo.Masculino :
                 item.sexo === Personas.eSexo.Femenino;
-        }).length)).toString();
+        }).length).toFixed(2).toString();
     }
     Personas.calcPromedio = calcPromedio;
     function resetearForm() {

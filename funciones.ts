@@ -82,7 +82,7 @@ namespace Personas {
     }
 
     export function calcPromedio() {
-        avgage.value = Math.round((listaPersona.filter(item => {
+        avgage.value = (listaPersona.filter(item => {
             return filterSexo.value === eSexo.Masculino ?
                 (<Cliente>item).sexo === eSexo.Masculino :
                 (<Cliente>item).sexo === eSexo.Femenino;
@@ -92,7 +92,7 @@ namespace Personas {
             return filterSexo.value === eSexo.Masculino ?
                 (<Cliente>item).sexo === eSexo.Masculino :
                 (<Cliente>item).sexo === eSexo.Femenino;
-        }).length)).toString()
+        }).length).toFixed(2).toString()
     }
 
     export function resetearForm() {
