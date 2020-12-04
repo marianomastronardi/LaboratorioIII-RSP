@@ -26,6 +26,8 @@ namespace Personas {
         btnDelete.addEventListener('click', EliminarFila);
         let btnLimpiar = (<HTMLInputElement>document.getElementById("btnLimpiar"));
         btnLimpiar.addEventListener('click', resetearForm);
+        let btnLimpiarTabla = (<HTMLInputElement>document.getElementById("btnLimpiarTabla"));
+        btnLimpiarTabla.addEventListener('click', ClearGrid);
         let calcAGE = (<HTMLInputElement>document.getElementById("calcAGE"));
         calcAGE.addEventListener('click', calcPromedio);
         inputID = (<HTMLInputElement>document.getElementById("idPersona"));
@@ -194,6 +196,14 @@ namespace Personas {
         edad.value = iEdad;
         sexo.value = iSexo;
 
+    }
+
+    export function ClearGrid(){
+        while (bmt.hasChildNodes()) {
+            bmt.removeChild(bmt.childNodes[0]);
+        }
+        //Matias, no se si tambien querias limpiar la lista, por las dudas, lo puse
+        listaPersona = [];
     }
 
 }

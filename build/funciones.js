@@ -27,6 +27,8 @@ var Personas;
         btnDelete.addEventListener('click', EliminarFila);
         var btnLimpiar = document.getElementById("btnLimpiar");
         btnLimpiar.addEventListener('click', resetearForm);
+        var btnLimpiarTabla = document.getElementById("btnLimpiarTabla");
+        btnLimpiarTabla.addEventListener('click', ClearGrid);
         var calcAGE = document.getElementById("calcAGE");
         calcAGE.addEventListener('click', calcPromedio);
         inputID = document.getElementById("idPersona");
@@ -186,4 +188,12 @@ var Personas;
         sexo.value = iSexo;
     }
     Personas.FillFields = FillFields;
+    function ClearGrid() {
+        while (bmt.hasChildNodes()) {
+            bmt.removeChild(bmt.childNodes[0]);
+        }
+        //Matias, no se si tambien querias limpiar la lista, por las dudas, lo puse
+        listaPersona = [];
+    }
+    Personas.ClearGrid = ClearGrid;
 })(Personas || (Personas = {}));

@@ -99,6 +99,18 @@ input[type=submit] {
     justify-content: center;
     font-size: 1rem;
 }
+
+#btnLimpiarTabla{
+    background-color: rgb(199, 41, 138); 
+    margin: 3px;
+    width:9rem;
+    height: 3rem;
+    color: honeydew;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+}
  .divFlexBet{
     display: flex;
     justify-content: space-between;
